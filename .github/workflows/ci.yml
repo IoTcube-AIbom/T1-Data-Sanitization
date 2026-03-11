@@ -1,0 +1,19 @@
+﻿name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check required files
+        run: |
+          test -f README.md
+          test -f docs/input-output-spec.md
+          test -f examples/input.json
+          test -f examples/expected_output.json
+      - name: Smoke test script exists
+        run: test -f scripts/smoke_test.sh

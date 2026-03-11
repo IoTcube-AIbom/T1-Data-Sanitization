@@ -1,0 +1,16 @@
+# Keep GitHub Linguist language stats focused on source examples.
+# Exclude shell scripts from language breakdown.
+*.sh linguist-detectable=false
+scripts/** linguist-detectable=false
+# Exclude Docker definitions from language breakdown.
+Dockerfile linguist-detectable=false
+docker/** linguist-detectable=false
+*.json filter=lfs diff=lfs merge=lfs -text
+dataset/coco/annotations/*.json filter=lfs diff=lfs merge=lfs -text
+.json filter=lfs diff=lfs merge=lfs -text
+dataset/coco/annotations/captions_train2017.json filter=lfs diff=lfs merge=lfs -text
+dataset/coco/annotations/captions_val2017.json filter=lfs diff=lfs merge=lfs -text
+dataset/coco/annotations/instances_train2017.json filter=lfs diff=lfs merge=lfs -text
+dataset/coco/annotations/instances_val2017.json filter=lfs diff=lfs merge=lfs -text
+dataset/coco/annotations/person_keypoints_train2017.json filter=lfs diff=lfs merge=lfs -text
+dataset/coco/annotations/person_keypoints_val2017.json filter=lfs diff=lfs merge=lfs -text

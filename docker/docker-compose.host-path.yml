@@ -1,0 +1,12 @@
+services:
+  <SERVICE_NAME>:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ${HOST_INPUT_DIR}:/app/input:ro
+      - ${HOST_OUTPUT_DIR}:/app/out
+    environment:
+      - TOOL_LOG_LEVEL=<LOG_LEVEL>
+      - INPUT_PATH=/app/input
+      - OUTPUT_PATH=/app/out/output.json

@@ -1,0 +1,2 @@
+﻿log_level: info
+output_path: ./out/output.json
